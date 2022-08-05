@@ -1,0 +1,18 @@
+{
+    "sourceFile": "requirements.txt",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1659667505775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1659667505775,
+            "name": "Commit-0",
+            "content": "Django>=3.2.4,<3.3\r\ndjangorestframework>=3.12.4,<3.13"
+        }
+    ]
+}
