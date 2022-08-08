@@ -98,7 +98,9 @@ class PrivateRecipeApiTests(TestCase):
     def test_recipe_list_limited_to_user(self):
         """Test list of recipes is limited to authenticated user."""
 
-        other_user = create_user(email="other@example.com", password="test12345")
+        other_user = create_user(
+            email="other@example.com", password="test12345"
+        )
 
         create_recipe(user=other_user)
         create_recipe(user=self.user)
@@ -264,7 +266,9 @@ class PrivateRecipeApiTests(TestCase):
         self.assertIn(tag_indian, recipe.tags.all())
 
         for tag in payload["tags"]:
-            exists = recipe.tags.filter(name=tag["name"], user=self.user).exists()
+            exists = recipe.tags.filter(
+                name=tag["name"], user=self.user
+            ).exists()
             self.assertTrue(exists)
 
     def test_create_tag_on_update(self):
